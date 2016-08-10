@@ -43,6 +43,11 @@ if coinflip == 1:
 else:
     me.hand.add([Card(id2Idx['GAME_005'])]) # the coin
 
-
-# while not end_of_game :
-#     prompt_action()
+end_of_game = False
+while not end_of_game :
+    if coinflip == 1 :
+        me.take_turn()
+        other.take_turn()
+    else:
+        other.take_turn()
+        me.take_turn()

@@ -34,6 +34,7 @@ class Card:
         self.id = allcards[idx]['id']
         self.name = allcards[idx]['name']
         self.type = allcards[idx]['type']
+        self.cost = allcards[idx].get('cost', None)
         self.mechanics = allcards[idx].get('mechanics', None)
         self.playerclass = allcards[idx].get('playerClass', None)
         self.set = allcards[idx]['set']
@@ -54,10 +55,10 @@ class Deck:
     def draw(self, target, count=1):
         for i in range(count):
             card = self.cards.pop(0)
-            target.add([card])
-            if self.owner.npc == False:
+            if not self.owner.npc:
                 print(self.owner.text('drawCard').format(str(card)))
                 # print('your deck has ' + str(len(self.cards)) + ' cards!') # DEBUG
+            target.add([card])
 
     def add(self, cards):
         self.cards.extend(cards)
@@ -72,6 +73,9 @@ class Hand:
         self.cards = []
 
     def add(self, cards):
+        if not self.owner.npc:
+            for card in cards:
+                print(self.owner.text('addCardHand').format(str(card)))
         self.cards.extend(cards)
 
     def remove(self, idx):
@@ -80,7 +84,12 @@ class Hand:
 
     def play(self, idx):
         card = self.cards.pop(idx)
-        print('you play: ' + str(idx) + ' from your hand!')
+        if (self.owner.mana - self.owner.mana_used) >= card.cost:
+            print('you play: ' + str(card) + ' from your hand!')
+            self.owner.mana_used += card.cost
+        else:
+            print('you are not {0} enough to do that!'.format(self.owner.adj))
+            self.cards.insert(idx, card) # put card back :p
 
 class Board:
     def __init__(self, owner):

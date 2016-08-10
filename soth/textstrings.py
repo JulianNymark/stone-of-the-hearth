@@ -1,0 +1,61 @@
+class_adjective = ['strong', 'spiritual', 'sneaky',
+                    'righteous', 'heartless', 'wild',
+                    'wicked', 'magical', 'holy',]
+
+text = {
+    'addCardHand': [
+        '{0} pops out from between your muscles!',
+        'you spot {0} amongst your totems!',
+        '{0} slips out from your sleeve!',
+        'a law-abiding citizen hands you {0}, how virtuous!',
+        'you sniff out {0} from the tall grass!',
+        'a mass of critters from the forest floor compress into {0} for you!',
+        'a voice in your head echoes... "here, take {0}!"',
+        'you wave your hands about you... *poof*... you get {0}!',
+        'a beacon of light beams from the heavens, {0} lies at your feet!'
+    ],
+    'drawCard': [
+        'You snag a card from the top of your deck.',
+        'You draw a card from your deck.',
+        'You topdeck',
+        'You simply draw a card from your deck; no tricks!',
+        'You flick a card from the top of your deck.',
+        'nature gives you a free card, but nature also took one from the top of your deck!',
+        'you draw a pain-free card from your deck!',
+        'In a magic-like hand gesture you deftly swipe a card from your deck!',
+        'You draw a card from your deck.'
+    ],
+    'shuffleDeck': [
+        'you furiously shuffle your deck!',
+        'you sense the disorder in your deck manifest!',
+        'you never really "shuffle" your deck, but you do try!',
+        'you riffle shuffle your deck at least seven times!',
+        'the way you shuffle leaves a lot to be desired, you even bend the corners as you jam them together',
+        'you try to shuffle your deck the way nature would have done it!',
+        'some imps shuffle your deck. Neat!',
+        'you make pretend magic noises... *poof*... your deck is shuffled!',
+        'you notice a faint glimmer of light on your deck. The Heavens make light off your situation and have decided to shuffle your deck for you!',
+    ],
+    'mulligan': [
+        'you HATE these cards! these are decidedly the WORST of the bunch!',
+        'these were not todays cards.',
+        'dismay strikes you as you scoff at the hand you drew',
+        'the RULES say you can redraw your cards! it\'s fair and just!',
+        '*growling noises*',
+        'nature makes a lot of mistakes...',
+        '\"another nasty hand\" you begrudge',
+        '\"My magic will mulligan this\"... the cards float back onto your deck',
+        'you stretch out your hand and clench it as if to take your opponents hand...\"this is a bad hand!, i don\'t like it!\" you announce to your opponent.',
+    ],
+    'heroPower': [
+        'You flex your muscles REALLY hard!',
+        'You swing your hand up from below; A totem erects!',
+        'First you reach into your sleeve and pull out a dagger, then you reach into your other sleeve and pull out another dagger.',
+        'A random civilian comes to your aid.',
+        '"Mmmhmmm!... take that!" you squeal as you loose an arrow at your opponents face.',
+        'You unsheath your cat-claws and brace yourself',
+        'You chant ominously',
+        '"Pew pew pew!"',
+        'You strew some sparkles and glitter about',
+    ],
+}
